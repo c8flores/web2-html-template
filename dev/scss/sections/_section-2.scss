@@ -1,3 +1,59 @@
 /* =============
     Section 2
 ============= */
+
+#section-5{
+
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". section-2 .";
+    }
+
+    ul{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-rows: repeat (3, 296px);
+    
+        @include md{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 340px);
+            grid-template-areas: 
+            "fashion fashion"
+            "fashion fashion"
+            "blue grey";
+        }
+
+        @include xl{
+            grid-area: section-2;
+        }
+
+        li{
+            background-position: center;
+            background-size: cover;
+        }
+
+        #boy{
+            background-image: url("../img/section-2/fashion.jpg");
+            @include md{
+                grid-area: fashion;
+                background-position: center;
+            }
+        }
+
+        #drone{
+            background-image: url("../img/section-2/blue.jpg");
+            @include md{
+                grid-area: blue;
+            }
+        }
+        
+        #jeep{
+            background-image: url("../img/section-2/grey.jpg");
+            @include md{
+                grid-area: grey;
+            }
+        }
+    }
+
+}

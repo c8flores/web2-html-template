@@ -382,37 +382,50 @@ textarea {
 ============= */
 header {
   background-color: #C7D7EC;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%; }
+  display: block;
+  height: 79px; }
   header > div {
     display: grid;
     grid-template-areas: "logo burger" "nav nav";
     grid-template-columns: 80% auto; }
     header > div section,
     header > div nav {
-      padding: 166px; }
+      padding: 50px; }
     header > div #logo-container {
       grid-area: logo; }
     header > div #burger-container {
       align-items: center;
       display: flex;
       grid-area: burger;
-      justify-content: flex-end; }
+      justify-content: flex-start; }
       @media (min-width: 992px) {
         header > div #burger-container {
           display: none !important; } }
       header > div #burger-container i {
         cursor: pointer; }
     header > div #nav-container {
-      background-color: #fff;
+      background-color: #C7D7EC;
       grid-area: nav;
       display: none;
-      padding: 166px; }
+      height: 79px; }
       @media (min-width: 992px) {
         header > div #nav-container {
           display: block !important; } }
+    header > div aside {
+      background-image: url("../img/header/nyfw.png");
+      background-size: 270px 45px;
+      background-position: left top;
+      height: 45px; }
+      @media (min-width: 768px) {
+        header > div aside {
+          grid-area: header;
+          height: 45px; } }
+      @media (min-width: 992px) {
+        header > div aside {
+          height: 50px; } }
+      @media (min-width: 1200px) {
+        header > div aside {
+          height: 50px; } }
 /* =============
     Footer
 ============= */
@@ -431,10 +444,10 @@ header {
       display: grid;
       grid-template-columns: 40% auto;
       grid-template-areas: "section-1-image section-1-content";
-      padding: 50px 0; } }
+      padding: 50px 50px; } }
   @media (min-width: 1200px) {
     #section-1 #section-2-container {
-      grid-area: section-2-container; } }
+      grid-area: section-1-container; } }
   #section-1 #section-2-container section {
     margin: 60px 0; }
     @media (min-width: 768px) {
@@ -444,24 +457,61 @@ header {
       padding: 0 15px; }
       @media (min-width: 768px) {
         #section-1 #section-2-container section #section-1-content {
-          grid-area: section-2-content; } }
+          grid-area: section-1-content; } }
   #section-1 #section-2-container aside {
     background-image: url("../img/section-1/bella.jpg");
-    background-size: cover;
-    height: 480px; }
+    background-size: 320px;
+    height: 251px; }
     @media (min-width: 768px) {
       #section-1 #section-2-container aside {
         grid-area: section-1-image;
-        height: 480px; } }
+        height: 505px; } }
     @media (min-width: 992px) {
       #section-1 #section-2-container aside {
-        height: 422px; } }
+        height: 572px; } }
     @media (min-width: 1200px) {
       #section-1 #section-2-container aside {
-        height: 737px; } }
+        height: 572px; } }
 /* =============
     Section 2
 ============= */
+@media (min-width: 1200px) {
+  #section-5 {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-areas: ". section-2 ."; } }
+
+#section-5 ul {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: repeat 3, 296px; }
+  @media (min-width: 768px) {
+    #section-5 ul {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 340px);
+      grid-template-areas: "fashion fashion" "fashion fashion" "blue grey"; } }
+  @media (min-width: 1200px) {
+    #section-5 ul {
+      grid-area: section-2; } }
+  #section-5 ul li {
+    background-position: center;
+    background-size: cover; }
+  #section-5 ul #boy {
+    background-image: url("../img/section-2/fashion.jpg"); }
+    @media (min-width: 768px) {
+      #section-5 ul #boy {
+        grid-area: fashion;
+        background-position: center; } }
+  #section-5 ul #drone {
+    background-image: url("../img/section-2/blue.jpg"); }
+    @media (min-width: 768px) {
+      #section-5 ul #drone {
+        grid-area: blue; } }
+  #section-5 ul #jeep {
+    background-image: url("../img/section-2/grey.jpg"); }
+    @media (min-width: 768px) {
+      #section-5 ul #jeep {
+        grid-area: grey; } }
 /* =============
     Section 3
 ============= */

@@ -3,10 +3,8 @@
 ============= */
 header {
     background-color: $grey-blue;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    display: block;
+    height: 79px;
 
     >div{
         display: grid;
@@ -16,7 +14,7 @@ header {
 
         section,
         nav{
-            padding: 166px;
+            padding: 50px;
         }
 
         #logo-container {
@@ -27,7 +25,7 @@ header {
             align-items: center;
             display: flex;
             grid-area: burger;
-            justify-content: flex-end;
+            justify-content: flex-start;
 
             @include lg {
                 display: none !important;
@@ -38,13 +36,30 @@ header {
         }
 
         #nav-container {
-            background-color: $white;
+            background-color: $grey-blue;
             grid-area: nav;
             display: none;
-            padding: 166px;
+            height: 79px;
 
             @include lg {
                 display: block !important;
+            }
+        }
+
+        aside{
+            background-image: url("../img/header/nyfw.png");
+            background-size: 270px 45px;
+            background-position: left top;
+            height: 45px;
+            @include md{
+                grid-area: header;
+                height: 45px;
+            }
+            @include lg{
+                height: 50px;
+            }
+            @include xl{
+                height: 50px;
             }
         }
     }
