@@ -1,3 +1,30 @@
 /* =============
     Section 3
 ============= */
+
+#section-3{
+    display: grid;
+    grid-template-columns: 15px auto 15px;
+    grid-template-areas: ". section-3 .";
+    padding: 43px 0px;
+    text-align: center;
+    color: $black;
+ 
+    @include md{
+        grid-template-columns: auto 70% auto;
+    }
+ 
+    @include xl{
+        grid-template-columns: auto 650px auto;
+    }
+ 
+    >div{
+        grid-area: section-3;
+ 
+        hr{
+            border: none;
+            height: 3px;
+            background-color: $black;
+        }
+    }
+ }

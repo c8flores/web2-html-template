@@ -1,9 +1,30 @@
 /* =============
-    Section 4
+    Section 5
 ============= */
-#section-4{
-    .grid-content{
-        
-    }
 
-}
+#section-5{
+    display: grid;
+    grid-template-columns: 15px auto 15px;
+    grid-template-areas: ". section-5 .";
+    padding: 43px 0px;
+    text-align: center;
+    color: $black;
+ 
+    @include md{
+        grid-template-columns: auto 70% auto;
+    }
+ 
+    @include xl{
+        grid-template-columns: auto 650px auto;
+    }
+ 
+    >div{
+        grid-area: section-5;
+ 
+        hr{
+            border: none;
+            height: 3px;
+            background-color: $black;
+        }
+    }
+ }
