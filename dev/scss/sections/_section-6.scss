@@ -1,9 +1,47 @@
 /* =============
-    Section 4
+    Section 6
 ============= */
-#section-4{
-    .grid-content{
-        
-    }
 
-}
+#section-6{
+    display: grid;
+    grid-template-columns: 15px auto 15px;
+    grid-template-areas: ". section-6 .";
+    padding: 43px 0px;
+    text-align: center;
+    color: $black;
+ 
+    @include md{
+        grid-template-columns: auto 70% auto;
+    }
+ 
+    @include xl{
+        grid-template-columns: auto 650px auto;
+    }
+ 
+    >div{
+        grid-area: section-6;
+ 
+        h1{
+            border: none;
+            height: 50px;
+            color: $dark-magenta;
+            text-align: left;
+        }
+
+        p{
+            border: none;
+            color: $black;
+            text-align: justify;
+        }
+        
+        .row {
+            display: flex;
+          }
+          
+          .column {
+            flex: 50%;
+            padding: 10px;
+          }
+    
+    }
+ }

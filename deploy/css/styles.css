@@ -343,15 +343,23 @@ ul {
     Typography
 ============= */
 body {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montaga', serif; }
 
 h1, h2, h3, h4 {
+  font-family: 'Montaga', serif;
   margin: 0;
   padding: 0; }
 
+h4 {
+  font-family: "Tajawal", sans-serif; }
+
 p {
+  font-family: 'Tajawal', sans-serif;
   margin: 0;
   padding: 0; }
+
+ul {
+  font-family: 'Tajawal', sans-serif; }
 
 .section-title {
   font-weight: 300; }
@@ -411,24 +419,22 @@ header {
       @media (min-width: 992px) {
         header > div #nav-container {
           display: block !important; } }
-    header > div aside {
-      background-image: url("../img/header/nyfw.png");
-      background-size: 270px 45px;
-      background-position: left top;
-      height: 45px; }
-      @media (min-width: 768px) {
-        header > div aside {
-          grid-area: header;
-          height: 45px; } }
-      @media (min-width: 992px) {
-        header > div aside {
-          height: 50px; } }
-      @media (min-width: 1200px) {
-        header > div aside {
-          height: 50px; } }
 /* =============
     Footer
 ============= */
+footer {
+  background-color: #C7D7EC;
+  grid-template-columns: 15px auto 15px;
+  grid-template-areas: ". footer .";
+  padding: 43px 0px;
+  display: grid;
+  height: 79px; }
+  footer h4 {
+    border: none;
+    height: 45px;
+    color: #000;
+    text-align: left; }
+
 /* =============
     Section 1
 ============= */
@@ -447,51 +453,58 @@ header {
       grid-template-columns: auto 650px auto; } }
   #section-1 > div {
     grid-area: section-1; }
-    #section-1 > div hr {
-      border: none;
-      height: 3px;
-      background-color: #000; }
+    #section-1 > div h1 {
+      height: 50px;
+      color: #B54C77;
+      text-align: left; }
+    #section-1 > div h2 {
+      color: #7FAEB0; }
+    #section-1 > div h4 {
+      color: #000;
+      text-align: left; }
+    #section-1 > div p {
+      color: #000;
+      text-align: left; }
 
 /* =============
     Section 2
 ============= */
-@media (min-width: 1200px) {
-  #section-5 {
-    display: grid;
-    grid-template-columns: auto 1200px auto;
-    grid-template-areas: ". section-2 ."; } }
-
-#section-5 ul {
+#section-2 {
   display: grid;
-  grid-gap: 20px;
-  grid-template-rows: repeat 3, 296px; }
+  grid-template-columns: 15px auto 15px;
+  grid-template-areas: ". section-2 .";
+  padding: 50px 0px;
+  text-align: center;
+  color: #000;
+  background-image: url("../img/section-2/header.jpg");
+  background-repeat: no-repeat;
+  background-size: 1440px 554px; }
   @media (min-width: 768px) {
-    #section-5 ul {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 340px);
-      grid-template-areas: "fashion fashion" "fashion fashion" "blue grey"; } }
+    #section-2 {
+      grid-template-columns: auto 70% auto; } }
   @media (min-width: 1200px) {
-    #section-5 ul {
-      grid-area: section-2; } }
-  #section-5 ul li {
-    background-position: center;
-    background-size: cover; }
-  #section-5 ul #boy {
-    background-image: url("../img/section-2/fashion.jpg"); }
-    @media (min-width: 768px) {
-      #section-5 ul #boy {
-        grid-area: fashion;
-        background-position: center; } }
-  #section-5 ul #drone {
-    background-image: url("../img/section-2/blue.jpg"); }
-    @media (min-width: 768px) {
-      #section-5 ul #drone {
-        grid-area: blue; } }
-  #section-5 ul #jeep {
-    background-image: url("../img/section-2/grey.jpg"); }
-    @media (min-width: 768px) {
-      #section-5 ul #jeep {
-        grid-area: grey; } }
+    #section-2 {
+      grid-template-columns: auto 650px auto; } }
+  #section-2 > div {
+    grid-area: section-2; }
+    #section-2 > div .responsive {
+      width: 100%;
+      height: auto; }
+    #section-2 > div h1 {
+      border: none;
+      height: 300px;
+      color: #fff;
+      text-align: left; }
+    #section-2 > div p {
+      border: none;
+      color: #fff;
+      text-align: justify; }
+    #section-2 > div .row {
+      display: flex; }
+    #section-2 > div .column {
+      flex: 50%;
+      padding: 10px; }
+
 /* =============
     Section 3
 ============= */
@@ -499,25 +512,55 @@ header {
   display: grid;
   grid-template-columns: 15px auto 15px;
   grid-template-areas: ". section-3 .";
-  padding: 43px 0px;
+  padding: 45px 0px;
   text-align: center;
-  color: #000; }
+  background-color: #E0AAC0; }
   @media (min-width: 768px) {
     #section-3 {
-      grid-template-columns: auto 70% auto; } }
+      grid-template-columns: auto 100% auto; } }
   @media (min-width: 1200px) {
     #section-3 {
       grid-template-columns: auto 650px auto; } }
   #section-3 > div {
     grid-area: section-3; }
-    #section-3 > div hr {
+    #section-3 > div h1 {
       border: none;
-      height: 3px;
-      background-color: #000; }
+      height: 80px;
+      color: #fff;
+      text-align: center; }
+    #section-3 > div h4 {
+      color: #6B1236;
+      height: 0 px;
+      text-align: center; }
 
 /* =============
     Section 4
 ============= */
+#section-4 {
+  display: grid;
+  grid-template-columns: 15px auto 15px;
+  grid-template-areas: ". section-4 .";
+  padding: 43px 0px;
+  text-align: center;
+  color: #000; }
+  @media (min-width: 768px) {
+    #section-4 {
+      grid-template-columns: auto 70% auto; } }
+  @media (min-width: 1200px) {
+    #section-4 {
+      grid-template-columns: auto 650px auto; } }
+  #section-4 > div {
+    grid-area: section-4; }
+    #section-4 > div h1 {
+      border: none;
+      height: 45px;
+      color: #042B3C; }
+    #section-4 > div p {
+      height: 90px;
+      color: #000;
+      text-align: justify;
+      text-justify: auto; }
+
 /* =============
     Section 5
 ============= */
@@ -527,7 +570,9 @@ header {
   grid-template-areas: ". section-5 .";
   padding: 43px 0px;
   text-align: center;
-  color: #000; }
+  color: #000;
+  background-color: #C7D7EC;
+  height: 160px; }
   @media (min-width: 768px) {
     #section-5 {
       grid-template-columns: auto 70% auto; } }
@@ -536,11 +581,46 @@ header {
       grid-template-columns: auto 650px auto; } }
   #section-5 > div {
     grid-area: section-5; }
-    #section-5 > div hr {
+    #section-5 > div h1 {
       border: none;
-      height: 3px;
-      background-color: #000; }
+      height: 45px;
+      color: #B54C77;
+      text-align: left; }
+    #section-5 > div h4 {
+      color: #000;
+      text-align: left; }
+    #section-5 > div p {
+      text-align: justify; }
 
 /* =============
-    Section 4
+    Section 6
 ============= */
+#section-6 {
+  display: grid;
+  grid-template-columns: 15px auto 15px;
+  grid-template-areas: ". section-6 .";
+  padding: 43px 0px;
+  text-align: center;
+  color: #000; }
+  @media (min-width: 768px) {
+    #section-6 {
+      grid-template-columns: auto 70% auto; } }
+  @media (min-width: 1200px) {
+    #section-6 {
+      grid-template-columns: auto 650px auto; } }
+  #section-6 > div {
+    grid-area: section-6; }
+    #section-6 > div h1 {
+      border: none;
+      height: 50px;
+      color: #6B1236;
+      text-align: left; }
+    #section-6 > div p {
+      border: none;
+      color: #000;
+      text-align: justify; }
+    #section-6 > div .row {
+      display: flex; }
+    #section-6 > div .column {
+      flex: 50%;
+      padding: 10px; }

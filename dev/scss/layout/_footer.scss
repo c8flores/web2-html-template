@@ -1,3 +1,18 @@
 /* =============
     Footer
 ============= */
+footer{
+    background-color: $grey-blue;
+    grid-template-columns: 15px auto 15px;
+    grid-template-areas: ". footer .";
+    padding: 43px 0px;
+    display: grid;
+    height: 79px;
+
+    h4{
+        border: none;
+        height: 45px;
+        color: $black;
+        text-align: left;
+    }
+}

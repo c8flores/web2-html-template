@@ -45,22 +45,5 @@ header {
                 display: block !important;
             }
         }
-
-        aside{
-            background-image: url("../img/header/nyfw.png");
-            background-size: 270px 45px;
-            background-position: left top;
-            height: 45px;
-            @include md{
-                grid-area: header;
-                height: 45px;
-            }
-            @include lg{
-                height: 50px;
-            }
-            @include xl{
-                height: 50px;
-            }
-        }
     }
 }

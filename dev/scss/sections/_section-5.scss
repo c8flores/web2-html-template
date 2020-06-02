@@ -9,6 +9,8 @@
     padding: 43px 0px;
     text-align: center;
     color: $black;
+    background-color: $grey-blue;
+    height: 160px;
  
     @include md{
         grid-template-columns: auto 70% auto;
@@ -21,10 +23,20 @@
     >div{
         grid-area: section-5;
  
-        hr{
+        h1{
             border: none;
-            height: 3px;
-            background-color: $black;
+            height: 45px;
+            color: $magenta;
+            text-align: left;
+        }
+
+        h4{
+            color: $black;
+            text-align: left;
+        }
+
+        p{
+            text-align: justify;
         }
     }
  }
